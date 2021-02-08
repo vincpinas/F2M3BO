@@ -30,6 +30,6 @@ ___This group project is a dashboard made with React.js, Node.js and the Duurzaa
 [reactjs.org]: https://reactjs.org/
 [react-icons.io]: https://react-icons.github.io/react-icons/
 [Duurzaam Huis Trello]: http://
-[Dashboard Duurzaamhuis]: http://
+[Dashboard Duurzaamhuis]: http://30472.hosts1.ma-cloud.nl/
 
 
