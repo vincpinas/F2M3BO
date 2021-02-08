@@ -1,7 +1,6 @@
 import React from 'react'
-import './Login.css'
 
-function Login() {
+function Navbar() {
     return (
         <div>
             
@@ -9,4 +8,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Navbar
