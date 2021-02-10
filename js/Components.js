@@ -23,6 +23,9 @@ const Alert = (props) => {
       }, [props.delay, props.timer]);
 
       return e("div", {
-        className: alertActive ? 'c-alert active' : 'c-alert'
+        className: alertActive ? 'c-alert active' : 'c-alert',
+        style: props.error ? {
+          background: '#bd2e2e'
+        } : null
       }, e("p", null, props.text));
 }
