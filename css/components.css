@@ -1,18 +1,20 @@
+/*
+* Alert Component Styling
+*/
 .c-alert-container {
     display: flex;
     flex-direction: column;
-    right: 0;
-    bottom: 0;
     height: fit-content;
     width: fit-content;
     align-items: flex-end;
     position: fixed;
-    z-index: 9000;
+    right: 0;
+    bottom: 0;
 }
 
 .c-alert {
     position: relative;
-    background-color: rgba(0, 0, 0, 0.281);
+    background-color: rgba(0, 0, 0, 0.288);
     width: fit-content;
     padding: 15px 40px;
     border-radius: 8px;
@@ -20,12 +22,14 @@
     transition: all 1.5s cubic-bezier(.74,.06,.32,1.44);
     transform: translateX(360px);
     margin-bottom: 6px;
-    letter-spacing: 0.8px;
-    font-weight: 600;
-    font-size: 13.5px;
+    letter-spacing: 1.2px;
 }
 
 .c-alert.active {
     margin-right: 10px;
     transform: translateX(0px);
 }
+
+/*
+*
+*/

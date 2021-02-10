@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*, *::after, *::before {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    height: 100vh;
+}
