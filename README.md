@@ -19,17 +19,16 @@ ___This group project is a dashboard made with React.js, Node.js and the Duurzaa
 
 ---
 ## Features
-* Authentication (Firebase Auth)
-* React Icons 
+* Custom Alerts
+* Dynamic Statistics
 
 ---
 ## Sources
-* [react-icons.io]
 * [reactjs.org]
 
 [reactjs.org]: https://reactjs.org/
 [react-icons.io]: https://react-icons.github.io/react-icons/
-[Duurzaam Huis Trello]: http://
-[Dashboard Duurzaamhuis]: http://30472.hosts1.ma-cloud.nl/
+[Duurzaam Huis Trello]: https://trello.com/b/wRKfeC19/duurzaamhuis
+[Dashboard Duurzaamhuis]: http://30472.hosts1.ma-cloud.nl/duurzaam-huis/
 
 
