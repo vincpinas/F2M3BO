@@ -8,6 +8,7 @@
     <!--Style Sheets-->
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
     <!--Scripts-->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
@@ -17,15 +18,22 @@
     <title>Duurzaam Huis</title>
 </head>
 <body>
-    <h2>Duurzaam Huis</h2>
-    <h4 id="team">Het Team</h4>
-    <p>* Vincent Pinas</p>
-    <p>* Max Bouricius</p>
-    <p>* Robin Zhao</p>
     <div id="c-alert-container" class="c-alert-container">
         <div id="alertContent" class="c-alert">
-            <p>{alert.text}</p>
+            <p>{ Alert Component }</p>
         </div>
     </div>
+    <main>
+        <div class="sidebar">
+            <div class="s-userDetails">
+                { userInfo Component }
+            </div>
+            <div class="s-linkList">
+                <a rel="noreffer" href="#" class="s-link">Control Panel</a>
+                <a rel="noreffer" href="#" class="s-link">Dashboard</a>
+                <a rel="noreffer" href="#" class="s-link">Contact</a>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

@@ -32,5 +32,59 @@
 }
 
 /*
-*
+* Sidebar Component
 */
+.sidebar {
+    background-color: #161A1D;
+    height: 100vh;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+}
+
+.s-userDetails {
+    padding: 1rem 0px;
+    border-bottom: #B1A7A6 solid 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.s-Item {
+    margin-bottom: 0.5rem;
+}
+
+.s-userImg {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+}
+
+.admin {
+    color: #E5383B;
+}
+
+.s-linkList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.s-link {
+    padding: 8.5px;
+    border-radius: 10px;
+    display: flex;
+    text-align: center;
+    margin-top: 0.3rem;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.s-link:hover {
+    background-color: rgba(102, 102, 102, 0.178);
+}

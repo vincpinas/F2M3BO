@@ -1,10 +1,7 @@
 'use strict';
-
-// Alert Component
 const { useState, useEffect } = React
 
-const alertContainer = document.getElementById('c-alert-container')
-
+// Alert Component
 const e = React.createElement;
 
 const Alert = (props) => {
@@ -28,4 +25,18 @@ const Alert = (props) => {
           background: '#bd2e2e'
         } : null
       }, e("p", null, props.text));
+}
+
+
+// User Information (Sidebar) Component
+const UserInfo = (props) => {
+    return e("div", {
+      className: "detailsContainer",
+
+    }, e("img", { className: "s-userImg s-Item", src: props.profilePic }),
+       e("div", { className: "userTextWrapper"},
+          e("h4", { className: "s-userName" }, props.user),
+          e("h5", { className: props.role === "Admin" ? "s-userRole admin" : "s-userRole default" }, props.role)
+       )
+    )
 }
