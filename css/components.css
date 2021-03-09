@@ -34,23 +34,24 @@
 /*
 * Sidebar Component
 */
-.sidebar {
-    background-color: #161A1D;
-    height: 100vh;
-    width: 15rem;
+.c-sidebar {
+    background-color: #0c0a0b;
+    height: fit-content;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 0px 15px;
 }
 
 .s-userDetails {
     padding: 1rem 0px;
-    border-bottom: #B1A7A6 solid 2px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-right: 1rem;
+    font-size: 0.9em;
 }
 
 .s-Item {
@@ -83,6 +84,16 @@
     margin-top: 0.3rem;
     transition: 0.3s;
     width: 100%;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.s-link i {
+    margin-right: 10px;
+}
+
+#home {
+    color: #E5383B;
 }
 
 .s-link:hover {

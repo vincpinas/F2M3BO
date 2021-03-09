@@ -30,13 +30,11 @@ const Alert = (props) => {
 
 // User Information (Sidebar) Component
 const UserInfo = (props) => {
-    return e("div", {
-      className: "detailsContainer",
-
-    }, e("img", { className: "s-userImg s-Item", src: props.profilePic }),
+    return e("div", { className: "detailsContainer"},
+       e("img", { className: "s-userImg s-Item", src: props.profilePic }),
        e("div", { className: "userTextWrapper"},
           e("h4", { className: "s-userName" }, props.user),
-          e("h5", { className: props.role === "Admin" ? "s-userRole admin" : "s-userRole default" }, props.role)
+          e("h4", { className: props.role === "Admin" ? "s-userRole admin" : "s-userRole default" }, props.role)
        )
     )
 }

@@ -1,6 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-*, *::after, *::before {
+/* @color palette
+*   Full Black:         #0c0a0b;
+*   Deep Ocean Black:   #0e1113;
+*   Blood Red:          #660708;
+*   Ruby Red:           #A4161A;
+*   Carnelian Red:      #BA181B;
+*   Imeprial Red:       #E5383B;
+*   Silver Chalice      #B1A7A6;
+*   Light Gray:         #D3D3D3;
+*   Cultured White:     #F5F3F4;
+*   Full White:         #FFFFFF;
+*/
+
+
+* {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0;
@@ -26,7 +40,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #c0c0c0;
+    background-color: #0e1113;
 }
 
 main {
