@@ -38,3 +38,16 @@ const UserInfo = (props) => {
        )
     )
 }
+
+
+// Loading Screen
+const LoadingScreen = () => {
+    return e("div", { className: "lds" },
+      e("div", { className: "lds-ellipsis" },
+        e("div", null),
+        e("div", null),
+        e("div", null),
+        e("div", null)
+      )
+    )
+}

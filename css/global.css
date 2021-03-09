@@ -2,6 +2,8 @@
 
 /* @color palette
 *   Full Black:         #0c0a0b;
+*   Cultured Black:     #0c0c0c;
+*   Deep Black:         #0d0d0d;
 *   Deep Ocean Black:   #0e1113;
 *   Blood Red:          #660708;
 *   Ruby Red:           #A4161A;
@@ -40,7 +42,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #0e1113;
+    background-color: #0d0d0d;
 }
 
 main {

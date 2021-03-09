@@ -17,23 +17,26 @@ const userDetails = document.querySelector('.s-userDetails')
 
 const userInfoContainer = () => {
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(false);
     useEffect(() => {
+        setLoading(true);
         fetch(`https://randomuser.me/api/`, {  })
             .then(response => response.json())
             .then(json => setUser(json))
             .catch(err => console.error(err))
+            .finally(setTimeout(() => setLoading(false), 1500))
     }, [])
 
     user ? console.log(user.results[0]) : null
     
-    return user ?  e(
+    return !loading && user ? e(
     React.Fragment, null,
         e(UserInfo, { 
             role: "Admin", 
             profilePic: "assets/profileImg-0.jpeg", 
             user: `${user.results[0].name.first} ${user.results[0].name.last}` 
         })
-    ) : null
+    ) : e(LoadingScreen)
 }
 
 ReactDOM.render(e(userInfoContainer), userDetails)
