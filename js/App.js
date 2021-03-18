@@ -26,8 +26,6 @@ const userInfoContainer = () => {
             .catch(err => console.error(err))
             .finally(setTimeout(() => setLoading(false), 1500))
     }, [])
-
-    user ? console.log(user.results[0]) : null
     
     return !loading && user ? e(
     React.Fragment, null,
@@ -40,3 +38,7 @@ const userInfoContainer = () => {
 }
 
 ReactDOM.render(e(userInfoContainer), userDetails)
+
+// In-house Api Calls
+postData(`/duurzaam-huis/api/api.php`, {})
+    .then(data => console.log(data))
