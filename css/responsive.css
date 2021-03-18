@@ -9,6 +9,10 @@
     .s-userDetails {
         border-bottom: #B1A7A6 solid 2px;
     }
+
+    main {
+        flex-direction: row;
+    }
 }
 
 /* Mobile Queries */
