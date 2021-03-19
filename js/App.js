@@ -24,14 +24,16 @@ const userInfoContainer = () => {
             .then(response => response.json())
             .then(json => setUser(json))
             .catch(err => console.error(err))
-            .finally(setTimeout(() => setLoading(false), 1500))
+            .finally(setTimeout(() => setLoading(false), 650))
     }, [])
+
+    !loading && user ? console.log(user.results[0]) : null
     
     return !loading && user ? e(
     React.Fragment, null,
         e(UserInfo, { 
             role: "Admin", 
-            profilePic: "assets/profileImg-0.jpeg", 
+            profilePic: user.results[0].picture.large, 
             user: `${user.results[0].name.first} ${user.results[0].name.last}` 
         })
     ) : e(LoadingScreen)
@@ -40,5 +42,5 @@ const userInfoContainer = () => {
 ReactDOM.render(e(userInfoContainer), userDetails)
 
 // In-house Api Calls
-postData(`/duurzaam-huis/api/api.php`, {})
+postData(`/duurzaam-huis/api/api.php?request_id=3`, {})
     .then(data => console.log(data))

@@ -1,37 +1,40 @@
-<?php include('db.php'); ?>
+<?php 
+    if (strpos($_SERVER['HTTP_HOST'], "ma-cloud.nl")) {
+        include('db.live.php');
+    } else {
+        include('db.local.php');
+    }
+    include('helpers.php');
+?>
 
 <?php
-    // Function taking in all the requested data and enconding it to json.
-    function response($request_id, $amount, $type, $response_desc) {
-        $response['request_type'] = $type;
-        $response['request_id'] = $request_id;
-        $response['amount'] = $amount;
-        $response['response_desc'] = $response_desc;
-        
-        $json_response = json_encode($response);
-        echo $json_response;
-    }
+    /*
+    * Available request items:
+    *   $request_id: number;
+    *   $amount: number;
+    *   $type: string;
+    *   $description: string;
+    *   $doc: { created: date; changed: date; }
+    *   $creator: { first: string; last: string; }
+    */
 
     header("Content-Type:application/json");
 
     // Getting the requested data from the data base.
-    if (isset($_GET['request_id']) && $_GET['request_id']!="") {
+    // TODO: adding a valid table to the data base to fetch data from.
+    // TODO: adding data types to show.
+    if (isset($_GET['request_id']) && $_GET['request_id'] != "") {
         $request_id = $_GET['request_id'];
         $result = mysqli_query(
             $con,
-            "SELECT * FROM `users` WHERE request_id=$request_id"
+            "SELECT * FROM `duurzaamdata` WHERE request_id = $request_id"
         );
-        if(mysqli_num_rows($result)>0) {
-            $row = mysqli_fetch_array($result);
-            $amount = $row['amount'];
-            $type = $row['type'];
-            $response_desc = $row['response_desc'];
-            response($request_id, $amount, $type, $response_desc);
-            mysqli_close($con);
-        } else {
-            response(NULL, NULL, NULL, "No Record Found");
+
+        if(mysqli_num_rows($result) > 0) {
+            fetchData($result, $request_id);
+        } else { 
+            response($request_id, NULL, NULL, "No Record Found", NULL, NULL, NULL, NULL); 
         }
     } else {
-        response(NULL, NULL, NULL, "Invalid Request");
+        response($request_id, NULL, NULL, "Invalid Request", NULL, NULL, NULL, NULL);
     }
-?>
