@@ -42,5 +42,5 @@ const userInfoContainer = () => {
 ReactDOM.render(e(userInfoContainer), userDetails)
 
 // In-house Api Calls
-postData(`/duurzaam-huis/api/api.php?request_id=3`, {})
+postData(`/duurzaam-huis/api/api.php?request_id=2`, {})
     .then(data => console.log(data))

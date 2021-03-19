@@ -33,8 +33,8 @@
         if(mysqli_num_rows($result) > 0) {
             fetchData($result, $request_id);
         } else { 
-            response($request_id, NULL, NULL, "No Record Found", NULL, NULL, NULL, NULL); 
+            response($request_id, NULL, NULL, "No Record Found", NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL); 
         }
     } else {
-        response($request_id, NULL, NULL, "Invalid Request", NULL, NULL, NULL, NULL);
+        response($request_id, NULL, NULL, "Invalid Request", NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
     }
