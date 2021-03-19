@@ -61,3 +61,42 @@ main {
     width: 100%;
     grid-gap: 15px;
 }
+
+.toolItem {
+    position: relative;
+}
+
+.tooltip {
+    background-color: #080808;
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    font-weight: 500;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.toolItem:hover .tooltip {
+    bottom: -25px;
+    opacity: 1;
+    pointer-events: auto;
+    text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+}
+
+.toolItem .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: #080808;
+    left: 50%;
+    top: -6px;
+    transform: translateX(-50%) rotate(45deg);
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}

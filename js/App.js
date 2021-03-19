@@ -20,7 +20,7 @@ const userInfoContainer = () => {
     const [loading, setLoading] = useState(false);
     useEffect(() => {
         setLoading(true);
-        fetch(`https://randomuser.me/api/`, {  })
+        fetch(`https://randomuser.me/api/`, { })
             .then(response => response.json())
             .then(json => setUser(json))
             .catch(err => console.error(err))
@@ -41,6 +41,28 @@ const userInfoContainer = () => {
 
 ReactDOM.render(e(userInfoContainer), userDetails)
 
-// In-house Api Calls
-postData(`/duurzaam-huis/api/api.php?request_id=2`, {})
-    .then(data => console.log(data))
+const widgetGrid = document.querySelector('.content-con')
+
+// Widget
+const widget1 = document.getElementById('widget1');
+
+const Widget = () => {
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        setLoading(true);
+        postData(`/duurzaam-huis/api/api.php?request_id=2`, { })
+            .then(response => setData(response))
+            .catch(err => console.error(err))
+            .finally(setTimeout(() => setLoading(false), 650))
+    }, []);
+    
+    !loading && data ? console.log(data) : null
+
+    return !loading && data ? e("div", { className: "widgetContent toolItem" },
+        e("div", { className: "tooltip" }, `Data provider: ${data.creator.first} ${data.creator.last.split()[0]}.`)
+    ) : e(LoadingScreen)
+}
+
+ReactDOM.render(e(Widget), widget1)
