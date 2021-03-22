@@ -1,3 +1,7 @@
+'use strict';
+const { useState, useEffect } = React
+const e = React.createElement;
+
 // Alert Component
 export const Alert = (props) => {
     const [alertActive, setAlertActive] = useState(false);

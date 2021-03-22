@@ -2,7 +2,6 @@ import { Alert, UserInfo, LoadingScreen } from './Components.js'
 import { postData } from './Helpers.js'
 import { alertContainer, userDetails, widget1 } from './elements.js';
 
-'use strict';
 const { useState, useEffect } = React
 const e = React.createElement;
 

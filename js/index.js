@@ -17,8 +17,9 @@ function widget2con(data){
     chart.container("widget2chart");
 
     chart.draw();
-};
 
-console.log(widget2Data)
+    widgetContainer.appendChild(chart)
+    widget2.appendChild(widgetContainer);
+};
 
 widget2con(widget2Data)
