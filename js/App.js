@@ -1,6 +1,12 @@
-// App Alerts
-const alertContainer = document.getElementById('c-alert-container')
+import { Alert, UserInfo, LoadingScreen } from './Components.js'
+import { postData } from './Helpers.js'
+import { alertContainer, userDetails, widget1 } from './elements.js';
 
+'use strict';
+const { useState, useEffect } = React
+const e = React.createElement;
+
+// App Alerts
 const AlertsContainer = () => {
     return e(
     React.Fragment, null, 
@@ -13,8 +19,6 @@ ReactDOM.render(e(AlertsContainer), alertContainer)
 
 
 // User Details
-const userDetails = document.querySelector('.s-userDetails')
-
 const userInfoContainer = () => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(false);
@@ -41,11 +45,8 @@ const userInfoContainer = () => {
 
 ReactDOM.render(e(userInfoContainer), userDetails)
 
-const widgetGrid = document.querySelector('.content-con')
 
 // Widget
-const widget1 = document.getElementById('widget1');
-
 const Widget = () => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false);

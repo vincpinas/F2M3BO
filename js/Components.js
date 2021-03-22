@@ -1,10 +1,5 @@
-'use strict';
-const { useState, useEffect } = React
-
 // Alert Component
-const e = React.createElement;
-
-const Alert = (props) => {
+export const Alert = (props) => {
     const [alertActive, setAlertActive] = useState(false);
 
     useEffect(() => {
@@ -29,7 +24,7 @@ const Alert = (props) => {
 
 
 // User Information (Sidebar) Component
-const UserInfo = (props) => {
+export const UserInfo = (props) => {
     return e("div", { className: "detailsContainer"},
        e("img", { className: "s-userImg s-Item", src: props.profilePic }),
        e("div", { className: "userTextWrapper"},
@@ -41,7 +36,7 @@ const UserInfo = (props) => {
 
 
 // Loading Screen
-const LoadingScreen = () => {
+export const LoadingScreen = () => {
     return e("div", { className: "lds" },
       e("div", { className: "lds-ellipsis" },
         e("div", null),
