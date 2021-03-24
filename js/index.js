@@ -1,25 +1,24 @@
 import { widget2 } from './elements.js';
 import { postData } from './Helpers.js'
 
-const widget2Data = postData(`/duurzaam-huis/api/api.php?request_id=1`, { })
+let widget2Data;
+let widget2Response = await fetch(`/duurzaam-huis/api/api.php?request_id=1`);
+if (widget2Response.ok) {
+    widget2Data = await widget2Response.json();
+    widget2con(widget2Data)
+}
+
 
 function widget2con(data){
-    const widgetContainer = document.createElement("div").className = "widget2Container";
+    let chart = anychart.pie();
 
-    let chartPoints = [
+    chart.data([
         {x: 'GPU', value: data.power_usage.gpu},
         {x: 'CPU', value: data.power_usage.cpu},
         {x: 'MTHB', value: data.power_usage.motherboard}
-    ];
+    ]);
 
-    chart = anychart.pie(chartPoints);
-
-    chart.container("widget2chart");
+    chart.container("widget2");
 
     chart.draw();
-
-    widgetContainer.appendChild(chart)
-    widget2.appendChild(widgetContainer);
 };
-
-widget2con(widget2Data)
