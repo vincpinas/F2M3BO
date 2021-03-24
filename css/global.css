@@ -42,7 +42,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(31, 31, 31);
 }
 
 main {
@@ -83,7 +83,7 @@ main {
 }
 
 .toolItem:hover .tooltip {
-    bottom: -25px;
+    bottom: -35px;
     opacity: 1;
     pointer-events: auto;
     text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
