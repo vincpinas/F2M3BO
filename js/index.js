@@ -22,7 +22,9 @@ function widget2con(data){
         {x: 'MTHB', value: data.power_usage.motherboard}
     ]);
 
-    chart.background().fill("#0a0a0a")
+    chart.title("Energieverbruik: computer componenten");
+
+    chart.background().fill("#0a0a0a");
 
     chart.container("widget2");
 
