@@ -49,6 +49,11 @@ ReactDOM.render(e(userInfoContainer), userDetails)
 const Widget = () => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [barActive, setBarActive] = useState(false);
+
+    useEffect(() => {
+      setTimeout(() => setBarActive(true), 700);
+    }, []);
 
     useEffect(() => {
         setLoading(true);
@@ -57,11 +62,23 @@ const Widget = () => {
             .catch(err => console.error(err))
             .finally(setTimeout(() => setLoading(false), 650))
     }, []);
-    
-    !loading && data ? console.log(data) : null
 
     return !loading && data ? e("div", { className: "widgetContent toolItem" },
-        e("div", { className: "tooltip" }, `Data provider: ${data.creator.first} ${data.creator.last.split()[0]}.`)
+        e("div", { className: "graph-bar-container" }, 'Tempatures, before and after.',
+            e("div", 
+              { 
+                className: "graph-bar", 
+                style: barActive ? { width: `${data.tempatures.before}%` } : null 
+              }, `Before: ${data.tempatures.before}°C`
+            ),
+            e("div", 
+              { 
+                className: "graph-bar", 
+                style: barActive ? { width: `${data.tempatures.before}%`, transitionDelay: '0.1s' } : null 
+              }, `After: ${data.tempatures.after}°C`
+            )
+        ),
+        e("div", { className: "tooltip" }, `${data.description.split("fixes")[0]}`)
     ) : e(LoadingScreen)
 }
 

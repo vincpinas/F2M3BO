@@ -206,3 +206,23 @@
 .anychart-credits {
     display: none !important;
 }
+
+.graph-bar-container {
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+.graph-bar {
+    font-size: 0.85em;
+    background-color: rgb(20, 20, 20);
+    overflow: hidden;
+    height: 25px;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 7px 0px;
+    width: 0%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: all 1.3s;
+  }
