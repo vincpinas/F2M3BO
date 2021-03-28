@@ -74,7 +74,7 @@ const Widget = () => {
             e("div", 
               { 
                 className: "graph-bar", 
-                style: barActive ? { width: `${data.tempatures.before}%`, transitionDelay: '0.1s' } : null 
+                style: barActive ? { width: `${data.tempatures.after}%`, transitionDelay: '0.1s' } : null 
               }, `After: ${data.tempatures.after}°C`
             )
         ),
