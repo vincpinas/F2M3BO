@@ -13,6 +13,16 @@
     main {
         flex-direction: row;
     }
+
+    .content-con {
+        padding: 10px;
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 0.5fr 1fr;
+        width: 100%;
+        grid-gap: 15px;
+    }
 }
 
 /* Mobile Queries */
