@@ -1,6 +1,3 @@
-import { widget2 } from './elements.js';
-import { postData } from './Helpers.js'
-
 let widget2Data;
 let widget2Response = await fetch(`/duurzaam-huis/api/api.php?request_id=1`);
 if (widget2Response.ok) {

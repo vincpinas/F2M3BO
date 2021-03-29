@@ -11,3 +11,9 @@ export const postData = async(url, data = {}) => {
     
     return response.json();
 }
+
+export const statusTemps = {
+    idle: { before: 75, after: 52},
+    work: { before: 81, after: 60},
+    gaming: { before: 95, after: 75}
+}
