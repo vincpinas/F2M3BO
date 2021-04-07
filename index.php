@@ -31,7 +31,6 @@ session_start();
     <script type="module" src="js/index.js" defer></script>
 </head>
 <body>
-	<a href="logout.php">Logout</a>
     <div id="c-alert-container" class="c-alert-container">
         <div id="alertContent" class="c-alert">
             <p>{ Alert Component }</p>
@@ -46,6 +45,7 @@ session_start();
                 <a rel="noreffer" href="#" class="s-link" id="dashboard"><i class="fas fa-chart-pie"></i>Dashboard</a>
                 <a rel="noreffer" href="#" class="s-link" id="controlPanel"><i class="fas fa-gamepad"></i>Control Panel</a>
                 <a rel="noreffer" href="#" class="s-link" id="contact"><i class="fas fa-address-card"></i>Contact</a>
+                <a href="login/logout.php" class="s-link" id="logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
             </div>
         </div>
         <div class="content-con">

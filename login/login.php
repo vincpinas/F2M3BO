@@ -54,28 +54,61 @@ session_start();
 <body>
 
 	<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+	* {
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+		font-family: 'Lato', sans-serif;
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+	}
+
+	body {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: #0c0c0c;
+	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	a {
+		color: #E5383B;
+		font-weight: 700;
+	}
 	
 	#text{
-
+		outline: none;
 		height: 25px;
 		border-radius: 5px;
-		padding: 4px;
+		padding: 6px;
 		border: solid thin #aaa;
 		width: 100%;
 	}
 
 	#button{
-
+		border-radius: 7px;
+		color: black;
 		padding: 10px;
 		width: 100px;
 		color: white;
-		background-color: lightblue;
+		background-color: #BA181B;
 		border: none;
 	}
 
 	#box{
-
-		background-color: grey;
+		border-radius: 7px;
+		background-color: #131313;
 		margin: auto;
 		width: 300px;
 		padding: 20px;
@@ -84,7 +117,6 @@ session_start();
 	</style>
 
 	<div id="box">
-		
 		<form method="post">
 			<div style="font-size: 20px;margin: 10px;color: white;">Login</div>
 
