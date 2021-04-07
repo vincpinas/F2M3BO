@@ -16,7 +16,7 @@ function widget2con(data){
     chart.data([
         {x: 'GPU', value: data.power_usage.gpu},
         {x: 'CPU', value: data.power_usage.cpu},
-        {x: 'MTHB', value: data.power_usage.motherboard}
+        {x: 'MOBO', value: data.power_usage.motherboard}
     ]);
 
     chart.title("Energieverbruik: computer componenten");
