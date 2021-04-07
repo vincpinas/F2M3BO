@@ -1,3 +1,13 @@
+<?php 
+session_start();
+
+	include("login/connection.php");
+	include("login/functions.php");
+
+	$user_data = check_login($con);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +31,7 @@
     <script type="module" src="js/index.js" defer></script>
 </head>
 <body>
+	<a href="logout.php">Logout</a>
     <div id="c-alert-container" class="c-alert-container">
         <div id="alertContent" class="c-alert">
             <p>{ Alert Component }</p>

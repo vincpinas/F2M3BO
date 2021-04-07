@@ -30,7 +30,7 @@ session_start();
 					{
 
 						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: index.php");
+						header("Location: /duurzaam-huis/index.php");
 						die;
 					}
 				}
@@ -88,8 +88,8 @@ session_start();
 		<form method="post">
 			<div style="font-size: 20px;margin: 10px;color: white;">Login</div>
 
-			<input id="text" type="text" name="user_name"><br><br>
-			<input id="text" type="password" name="password"><br><br>
+			<input id="text" placeholder="Username" type="text" name="user_name"><br><br>
+			<input id="text" placeholder="Password" type="password" name="password"><br><br>
 
 			<input id="button" type="submit" value="Login"><br><br>
 
