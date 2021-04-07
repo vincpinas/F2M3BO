@@ -1,3 +1,13 @@
+<?php 
+session_start();
+
+	include("login/connection.php");
+	include("login/functions.php");
+
+	$user_data = check_login($con);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +45,7 @@
                 <a rel="noreffer" href="#" class="s-link" id="dashboard"><i class="fas fa-chart-pie"></i>Dashboard</a>
                 <a rel="noreffer" href="#" class="s-link" id="controlPanel"><i class="fas fa-gamepad"></i>Control Panel</a>
                 <a rel="noreffer" href="#" class="s-link" id="contact"><i class="fas fa-address-card"></i>Contact</a>
+                <a href="login/logout.php" class="s-link" id="logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
             </div>
         </div>
         <div class="content-con">
