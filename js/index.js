@@ -74,7 +74,7 @@ function maakGrafiek(){
     chart2.draw();
 };
 
-startGrafiek();
+window.addEventListener('DOMContentLoaded', startGrafiek);
 
 
 
