@@ -55,9 +55,10 @@ const laadJSON = (url) => {
 };
 
 function maakGrafiek(){
-    let chart2 = anychart.line();
 
-    chart.data(data);
+    anychart.data.set(data);
+
+    let chart2 = anychart.line();
 
     chart2.title("Maandelijkse energie verbruik computer");
 
