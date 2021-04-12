@@ -74,6 +74,8 @@ function maakGrafiek(){
     chart2.draw();
 };
 
+startGrafiek();
+
 
 
 
