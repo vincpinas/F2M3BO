@@ -1,34 +1,30 @@
-[
-    {   
-        "data": [
-            {"x":"januari", "value": 33.5},
-            {"x":"februari", "value": 36.4},
-            {"x":"maart", "value": 35.2},
-            {"x":"april", "value": 37.6},
-            {"x":"mei", "value": 32.9},
-            {"x":"juni", "value": 33.7},
-            {"x":"juli", "value": 36.8},
-            {"x":"augustus", "value": 35.1},
-            {"x":"september", "value": 34.4},
-            {"x":"oktober", "value": 31.9},
-            {"x":"november", "value": 34.6},
-            {"x":"december", "value": 37.1}
-
-        ],
-
-        "data": [
-            {"x":"januari", "value": 28.5},
-            {"x":"februari", "value": 33.4},
-            {"x":"maart", "value": 32.2},
-            {"x":"april", "value": 32.6},
-            {"x":"mei", "value":  31.9},
-            {"x":"juni", "value": 29.7},
-            {"x":"juli", "value": 30.8},
-            {"x":"augustus", "value": 30.1},
-            {"x":"september", "value": 34.4},
-            {"x":"oktober", "value": 31.4},
-            {"x":"november", "value":  32.9},
-            {"x":"december", "value": 33.6}
-        ]
-    }
-]
+{   
+    "data": [
+        {"x":"januari", "value": 33.5},
+        {"x":"februari", "value": 36.4},
+        {"x":"maart", "value": 35.2},
+        {"x":"april", "value": 37.6},
+        {"x":"mei", "value": 32.9},
+        {"x":"juni", "value": 33.7},
+        {"x":"juli", "value": 36.8},
+        {"x":"augustus", "value": 35.1},
+        {"x":"september", "value": 34.4},
+        {"x":"oktober", "value": 31.9},
+        {"x":"november", "value": 34.6},
+        {"x":"december", "value": 37.1}
+    ],
+    "data2": [
+        {"x":"januari", "value": 28.5},
+        {"x":"februari", "value": 33.4},
+        {"x":"maart", "value": 32.2},
+        {"x":"april", "value": 32.6},
+        {"x":"mei", "value":  31.9},
+        {"x":"juni", "value": 29.7},
+        {"x":"juli", "value": 30.8},
+        {"x":"augustus", "value": 30.1},
+        {"x":"september", "value": 34.4},
+        {"x":"oktober", "value": 31.4},
+        {"x":"november", "value":  32.9},
+        {"x":"december", "value": 33.6}
+    ]
+}

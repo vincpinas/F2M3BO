@@ -42,7 +42,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(41, 41, 41);
+    background-color: rgb(36, 36, 36);
 }
 
 main {
@@ -101,4 +101,8 @@ main {
     top: -6px;
     transform: translateX(-50%) rotate(45deg);
     transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ct-labels, .ct-grids {
+    display: none;
 }

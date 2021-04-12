@@ -5,12 +5,9 @@ if (widget2Response.ok) {
     widget2con(widget2Data)
 }
 
-
 function widget2con(data){
     let chart = anychart.pie();
-
     const dataProvider = document.querySelector("#widget2 .tooltip");
-
     dataProvider.innerHTML = `Data provider: ${data.creator.first} ${data.creator.last}.`
 
     chart.data([
@@ -20,18 +17,11 @@ function widget2con(data){
     ]);
 
     chart.title("Energieverbruik: computer componenten");
-
     chart.background().fill("#0a0a0a");
-
     chart.container("widget2");
-
     chart.draw();
 };
 
-const startGrafiek = () => {
-    // Hier komt de jouw code die na het laden van de pagina wordt uitgevoerd
-    laadJSON("json/data.json");
-}
 
 const laadJSON = (url) => {
     // het XMLHttpRequest object maken
@@ -40,10 +30,8 @@ const laadJSON = (url) => {
     aanvraag.onreadystatechange = () => {
       if (aanvraag.readyState === 4 && aanvraag.status === 200) {
         let jsonText = aanvraag.responseText;
-        console.log(jsonText);
         data = JSON.parse(jsonText);
-        console.log(data)
-        maakGrafiek();
+        maakGrafiek(data.data);
       }
     };
   
@@ -54,28 +42,17 @@ const laadJSON = (url) => {
     aanvraag.send();
 };
 
-function maakGrafiek(){
-
-    anychart.data.set(data);
-
+function maakGrafiek(data){
     let chart2 = anychart.line();
-
+    chart2.data = data;
     chart2.title("Maandelijkse energie verbruik computer");
-
     var xAxis = chart.xAxis();
     xAxis.title("Maand");
     var yAxis = chart.yAxis();
     yAxis.title("Gebruik in KwH");
-
     chart2.background().fill("#0a0a0a");
-
     chart2.container("widget3");
-
     chart2.draw();
 };
 
-window.addEventListener('DOMContentLoaded', startGrafiek);
-
-
-
-
+laadJSON("json/data.json");

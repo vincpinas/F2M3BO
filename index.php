@@ -27,6 +27,8 @@ session_start();
     <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-base.min.js"></script>
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     <script type="module" src="js/App.js" defer></script>
     <script type="module" src="js/index.js" defer></script>
 </head>
