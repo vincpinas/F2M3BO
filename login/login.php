@@ -87,7 +87,7 @@ session_start();
 		font-weight: 700;
 	}
 	
-	#text{
+	.text{
 		outline: none;
 		height: 25px;
 		border-radius: 5px;
@@ -120,8 +120,8 @@ session_start();
 		<form method="post">
 			<div style="font-size: 20px;margin: 10px;color: white;">Login</div>
 
-			<input id="text" placeholder="Username" type="text" name="user_name"><br><br>
-			<input id="text" placeholder="Password" type="password" name="password"><br><br>
+			<input class="text" placeholder="Username" type="text" name="user_name"><br><br>
+			<input class="text" placeholder="Password" type="password" name="password"><br><br>
 
 			<input id="button" type="submit" value="Login"><br><br>
 
