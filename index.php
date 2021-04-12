@@ -52,13 +52,18 @@ session_start();
             <div class="widget" id="widget1">
 
             </div>
-            <div class="widget" id="widget2">
-                <div class="widgetContent toolItem">
+            <div class="widget" id="wid2">
+                <div class="widgetContent toolItem" id="widget2">
                     <div class="tooltip"></div>
                 </div>
             </div>
-            <div class="widget" id="widget3">
-                <div class="widgetContent toolItem">
+            <div class="widget" id="wid3">
+                <div class="widgetContent toolItem" id="widget3">
+                    <div class="tooltip">Widget</div>
+                </div>
+            </div>
+            <div class="widget" id="wid4">
+                <div class="widgetContent toolItem" id="widget4">
                     <div class="tooltip">Widget</div>
                 </div>
             </div>

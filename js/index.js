@@ -27,3 +27,50 @@ function widget2con(data){
 
     chart.draw();
 };
+
+const startGrafiek = () => {
+    // Hier komt de jouw code die na het laden van de pagina wordt uitgevoerd
+    laadJSON("json/data.json");
+}
+
+const laadJSON = (url) => {
+    // het XMLHttpRequest object maken
+    const aanvraag = new XMLHttpRequest();
+
+    aanvraag.onreadystatechange = () => {
+      if (aanvraag.readyState === 4 && aanvraag.status === 200) {
+        let jsonText = aanvraag.responseText;
+        console.log(jsonText);
+        data = JSON.parse(jsonText);
+        console.log(data)
+        maakGrafiek();
+      }
+    };
+  
+    // serveraanvraag specificeren
+    aanvraag.open("GET", url, true);
+  
+    // aanvraag versturen
+    aanvraag.send();
+};
+
+function maakGrafiek(){
+    let chart2 = anychart.line(data);
+
+    chart2.title("Maandelijkse energie verbruik computer");
+
+    var xAxis = chart.xAxis();
+    xAxis.title("Maand");
+    var yAxis = chart.yAxis();
+    yAxis.title("Gebruik in KwH");
+
+    chart2.background().fill("#0a0a0a");
+
+    chart2.container("widget3");
+
+    chart2.draw();
+};
+
+
+
+
