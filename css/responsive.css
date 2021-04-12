@@ -46,6 +46,10 @@
     grid-area: wid3;
 }
 
+#wid4{
+    grid-area: wid4;
+}
+
 /* Mobile Queries */
 @media screen and (max-width: 767px) {
 
