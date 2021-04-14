@@ -31,7 +31,8 @@ const laadJSON = (url) => {
       if (aanvraag.readyState === 4 && aanvraag.status === 200) {
         let jsonText = aanvraag.responseText;
         let data = JSON.parse(jsonText);
-        maakGrafiek(data);
+        widget3con(data.energiedata);
+        widget4con(data.plasticdata)
       }
     };
   
@@ -42,10 +43,9 @@ const laadJSON = (url) => {
     aanvraag.send();
 };
 
-function maakGrafiek(data){
-    console.log(data.data)
+function widget3con(data){
     let chart2 = anychart.line();
-    chart2.data(data.data);
+    chart2.data(data);
     chart2.title("Maandelijkse energie verbruik computer");
     var xAxis = chart2.xAxis();
     xAxis.title("Maand");
@@ -56,4 +56,14 @@ function maakGrafiek(data){
     chart2.draw();
 };
 
-laadJSON("json/data.json");
+function widget4con(data) {
+    new Chartist.Pie(`#widget4`, data, {
+        donut: true,
+        donutWidth: 50,
+        donutSolid: true,
+        startAngle: 270,
+        total: 304
+    })
+}
+
+window.addEventListener("DOMContentLoaded", laadJSON("json/data.json"));

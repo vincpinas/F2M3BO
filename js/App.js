@@ -29,8 +29,6 @@ const userInfoContainer = () => {
             .catch(err => console.error(err))
             .finally(setTimeout(() => setLoading(false), 650))
     }, [])
-
-    !loading && user ? console.log(user.results[0]) : null
     
     return !loading && user ? e(
     React.Fragment, null,
@@ -51,15 +49,17 @@ const Widget = () => {
     const [loading, setLoading] = useState(false);
     const [barActive, setBarActive] = useState(false);
 
-    !loading && data ? new Chartist.Line(`#widget1chart`, {
-      labels: ["GPU", "CPU", "MOBO"],
-      series: [
-        [55, 67, 64, 72, 71, 71, 80, 71, 87],
-        [66, 60, 75, 70, 72, 82, 86, 82, 83],
-        [90, 81, 87, 94, 89, 90, 88, 96, 90]
-      ]
-    }) : null
-
+    !loading && data ? setTimeout(() => {
+      new Chartist.Line(`#widget1chart`, {
+        labels: ["GPU", "CPU", "MOBO"],
+        series: [
+          [55, 67, 64, 72, 71, 71, 80, 71, 87],
+          [66, 60, 75, 70, 72, 82, 86, 82, 83],
+          [90, 81, 87, 94, 89, 90, 88, 96, 90]
+        ]
+      })
+    }, 50) : null
+    
     useEffect(() => {
         setTimeout(() => setBarActive(true), 700);
         setLoading(true);
