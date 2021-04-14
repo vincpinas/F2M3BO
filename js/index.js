@@ -30,8 +30,8 @@ const laadJSON = (url) => {
     aanvraag.onreadystatechange = () => {
       if (aanvraag.readyState === 4 && aanvraag.status === 200) {
         let jsonText = aanvraag.responseText;
-        data = JSON.parse(jsonText);
-        maakGrafiek(data.data);
+        let data = JSON.parse(jsonText);
+        maakGrafiek(data);
       }
     };
   
@@ -43,12 +43,13 @@ const laadJSON = (url) => {
 };
 
 function maakGrafiek(data){
+    console.log(data.data)
     let chart2 = anychart.line();
-    chart2.data = data;
+    chart2.data(data.data);
     chart2.title("Maandelijkse energie verbruik computer");
-    var xAxis = chart.xAxis();
+    var xAxis = chart2.xAxis();
     xAxis.title("Maand");
-    var yAxis = chart.yAxis();
+    var yAxis = chart2.yAxis();
     yAxis.title("Gebruik in KwH");
     chart2.background().fill("#0a0a0a");
     chart2.container("widget3");

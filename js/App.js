@@ -51,14 +51,14 @@ const Widget = () => {
     const [loading, setLoading] = useState(false);
     const [barActive, setBarActive] = useState(false);
 
-    new Chartist.Line(`#widget1chart`, {
+    !loading && data ? new Chartist.Line(`#widget1chart`, {
       labels: ["GPU", "CPU", "MOBO"],
       series: [
         [55, 67, 64, 72, 71, 71, 80, 71, 87],
         [66, 60, 75, 70, 72, 82, 86, 82, 83],
         [90, 81, 87, 94, 89, 90, 88, 96, 90]
       ]
-    });
+    }) : null
 
     useEffect(() => {
         setTimeout(() => setBarActive(true), 700);
